@@ -126,7 +126,7 @@ SVD 缓存使用不含 pickle 的 NPZ，绑定模型、参数名和实际基础�
 
 ## 来源与复现
 
-- 本研究仓库：[zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)，私有仓库，默认分支 `main`。服务器需具备读取权限；可用 `gh repo clone zhuhaoxiang1/randopt-spectral` 获取。
+- 本研究仓库：[zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)，公开仓库，默认分支 `main`。可用 `git clone https://github.com/zhuhaoxiang1/randopt-spectral.git` 匿名获取。
 - 官方 RandOpt：<https://github.com/sunrainyg/RandOpt>，基础提交 `536df0a308f3990b6270c991fbb96bd0b779a58e`。
 - Neural Thickets：<https://arxiv.org/abs/2603.12228>；Diffract：<https://arxiv.org/abs/2608.10850>。
 - 数据来源：OpenAI `grade-school-math` 官方仓库的 `grade_school_math/data/{train,test}.jsonl`。

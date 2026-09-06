@@ -40,12 +40,12 @@
 
 ## 4. 收到工程与设置总截止时间
 
-本扩展位于私有仓库 [zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)，默认分支 `main`。基础提交为 `536df0a308f3990b6270c991fbb96bd0b779a58e`，本地开发分支 `spectral-perturbations` 推送到远端 `main`。**仅 clone 官方 sunrainyg/RandOpt 仓库拿不到本扩展。**
+本扩展位于公开仓库 [zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)，默认分支 `main`。基础提交为 `536df0a308f3990b6270c991fbb96bd0b779a58e`，本地开发分支 `spectral-perturbations` 推送到远端 `main`。**仅 clone 官方 sunrainyg/RandOpt 仓库拿不到本扩展。**
 
-服务器已有该私有仓库的读取权限时，执行下面的克隆命令；没有权限时使用用户提供的工程副本。不要在脚本、文档或日志中写入访问令牌。
+服务器可直接匿名克隆，无需 GitHub 登录或访问令牌：
 
 ```bash
-gh repo clone zhuhaoxiang1/randopt-spectral
+git clone https://github.com/zhuhaoxiang1/randopt-spectral.git
 cd randopt-spectral
 ```
 

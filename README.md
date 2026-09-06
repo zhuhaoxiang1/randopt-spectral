@@ -2,7 +2,7 @@
 
 ## 本地谱扰动实验扩展
 
-本研究仓库：[zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)（私有，默认分支 `main`）。
+本研究仓库：[zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)（公开，默认分支 `main`）。
 基于 [sunrainyg/RandOpt](https://github.com/sunrainyg/RandOpt)，保留上游代码与历史。
 
 新增的 CPU / 单 GPU 实验入口、Qwen2.5-1.5B-Instruct 配置和离线 smoke 见
