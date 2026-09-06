@@ -1,0 +1,6 @@
+# Optional environment setup on the GPU host; do not install upstream vLLM/Ray for this runner.
+torch>=2.6
+transformers>=4.56,<6
+numpy>=1.26,<3
+huggingface-hub>=0.34
+pytest>=8

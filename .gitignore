@@ -10,3 +10,9 @@
  *.pt
  *.pkl
  *.whl
+
+# Local spectral experiments (no weights or datasets are committed).
+runs/
+data/spectral/
+.pytest_cache/
+.venv/

@@ -1,5 +1,22 @@
 # RandOpt
 
+## 本地谱扰动实验扩展
+
+本研究仓库：[zhuhaoxiang1/randopt-spectral](https://github.com/zhuhaoxiang1/randopt-spectral)（私有，默认分支 `main`）。
+基于 [sunrainyg/RandOpt](https://github.com/sunrainyg/RandOpt)，保留上游代码与历史。
+
+新增的 CPU / 单 GPU 实验入口、Qwen2.5-1.5B-Instruct 配置和离线 smoke 见
+[SPECTRAL_EXPERIMENTS.md](SPECTRAL_EXPERIMENTS.md)。官方 Ray/vLLM 入口保留原样。
+
+**48GB 单卡、最多 12 小时的服务器任务：** 按 [SERVER_EXPERIMENT_PLAN.md](SERVER_EXPERIMENT_PLAN.md) 执行。
+默认 N=100、K=50，公平比较原始 RandOpt 扰动规则、同范围高斯与 U/V 谱旋转；先实测吞吐再确定共同规模。
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python3 -m spectral_randopt smoke --output-dir runs/smoke
+```
+
+此命令使用随机初始化的微型 Qwen2，不下载模型、数据或依赖。
+
 <p align="center">
   <img src="assets/neural_thickets.gif" alt="Neural Thickets" width="100%">
 </p>

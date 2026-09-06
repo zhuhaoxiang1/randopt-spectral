@@ -1,0 +1,112 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "linalg_device": "auto",
+  "seed": 42,
+  "population": 256,
+  "rhos": [
+    0.001,
+    0.003
+  ],
+  "antithetic": true,
+  "top_k": [
+    1,
+    5,
+    10
+  ],
+  "train_samples": 256,
+  "probe_samples": 64,
+  "test_samples": null,
+  "max_new_tokens": 1024,
+  "max_prompt_tokens": 1024,
+  "reference_max_tokens": 128,
+  "train_path": "../data/spectral/gsm8k_train.jsonl",
+  "test_path": "../data/spectral/gsm8k_test.jsonl",
+  "reference_path": "../data/spectral/reference.jsonl",
+  "output_dir": "../runs/qwen15b-full",
+  "projections": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "layers": null,
+  "head_indices": null,
+  "diagnostic_heads": 8,
+  "margin": 0.01,
+  "save_texts": false,
+  "methods": [
+    {
+      "name": "gaussian",
+      "kind": "gaussian",
+      "side": "both",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "direction",
+      "kind": "direction",
+      "side": "both",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "values",
+      "kind": "values",
+      "side": "both",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "orthogonal",
+      "kind": "orthogonal",
+      "side": "both",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "spectral_u",
+      "kind": "spectral",
+      "side": "u",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "spectral_v",
+      "kind": "spectral",
+      "side": "v",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    },
+    {
+      "name": "spectral_uv",
+      "kind": "spectral",
+      "side": "both",
+      "band": "all",
+      "pairing": "within",
+      "distribution": "sign",
+      "pairs": 4,
+      "max_angle": 0.2
+    }
+  ]
+}
